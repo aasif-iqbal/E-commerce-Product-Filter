@@ -68,6 +68,10 @@
 #mrp{
   text-decoration: line-through;
 }
+#NotFound{
+  padding:30% 30% 40% 35%;
+  font-size:250%;
+}
     </style>
 
     <title>Product Filter</title>
@@ -484,7 +488,8 @@ function showProduct(pgNum, brand_flag, color_flag, price_flag, discount_flag)
                    $('#pageNum').html(pageNum);
                   }else{                                        
                     $('#pglink').hide();
-                    document.getElementById('showList').innerHTML = "<h1>No Data Found</h1>";
+                    $('#pageNum').hide();
+                    document.getElementById('showList').innerHTML = "<div id='NotFound'>No Data Found</div>";                    
                   }
 
                 },//success-ends
